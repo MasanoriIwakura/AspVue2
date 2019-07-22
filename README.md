@@ -27,3 +27,16 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+---
+
+### .NET Core Build
+```
+dotnet build
+```
+
+### .NET Core Run
+```
+# 先にnpm run buildをしておく
+dotnet run
+```

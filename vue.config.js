@@ -6,5 +6,6 @@ module.exports = {
       filename: 'index.html',
       title: 'AspVue2'
     }
-  }
+  },
+  outputDir: 'wwwroot'
 }
