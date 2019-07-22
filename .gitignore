@@ -4,6 +4,7 @@ node_modules
 obj
 bin
 wwwroot/*
+*.db
 
 # local env files
 .env.local
