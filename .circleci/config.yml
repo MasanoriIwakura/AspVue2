@@ -1,7 +1,7 @@
 version: 2
 
 jobs:
-  dotnet-build:
+  dotnet_build:
     docker:
       - image: mcr.microsoft.com/dotnet/core/sdk:2.2
     steps:
@@ -18,7 +18,8 @@ jobs:
         name: .NET Run
         command: dotnet run
         working_directory: api
-  vue-build:
+
+  vue_build:
     docker:
       - image: node:lts-alpine
     steps:
@@ -32,9 +33,9 @@ jobs:
         command: npm run serve
         working_directory: front
 
-workfrows:
+workflows:
   version: 2
-  dotnet-vue-build:
+  dotnet_vue_build:
     jobs:
       - dotnet-build
       - vue-build
