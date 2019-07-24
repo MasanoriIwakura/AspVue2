@@ -34,7 +34,7 @@ jobs:
 
 workfrows:
   version: 2
-  build:
+  dotnet-vue-build:
     jobs:
       - dotnet-build
       - vue-build
