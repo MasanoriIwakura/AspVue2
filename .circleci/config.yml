@@ -1,11 +1,5 @@
 version: 2
-workfrows:
-  version: 2
-  build:
-    jobs:
-      - dotnet-build
-      - vue-build
-      
+
 jobs:
   dotnet-build:
     docker:
@@ -37,3 +31,10 @@ jobs:
         name: npm Run
         command: npm run serve
         working_directory: front
+
+workfrows:
+  version: 2
+  build:
+    jobs:
+      - dotnet-build
+      - vue-build
