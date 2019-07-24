@@ -1,32 +1,37 @@
 version: 2
+
 jobs:
-  dotnet-build:
+  dotnet_build:
     docker:
       - image: mcr.microsoft.com/dotnet/core/sdk:2.2
     steps:
       - checkout
       - run:
-        name: .NET Restore
-        command: dotnet restore
-        working_directory: api
+          name: .NET Restore
+          command: dotnet restore
+          working_directory: api
       - run:
-        name: .NET Build
-        command: dotnet build
-        working_directory: api
-      - run:
-        name: .NET Run
-        command: dotnet run
-        working_directory: api
-  vue-build:
+          name: .NET Build
+          command: dotnet build
+          working_directory: api
+
+  vue_build:
     docker:
       - image: node:lts-alpine
     steps:
       - checkout
       - run:
-        name: npm Install
-        command: npm i
-        working_directory: front
+          name: npm Install
+          command: npm install
+          working_directory: front
       - run:
-        name: npm Run
-        command: npm run serve
-        working_directory: front
+          name: npm Build
+          command: npm run build
+          working_directory: front
+
+workflows:
+  version: 2
+  dotnet_vue_build:
+    jobs:
+      - dotnet_build
+      - vue_build
