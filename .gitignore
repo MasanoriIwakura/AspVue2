@@ -1,8 +1,10 @@
 .DS_Store
 node_modules
-/dist
+dist
 obj
 bin
+publish
+log
 wwwroot/*
 *.db
 
