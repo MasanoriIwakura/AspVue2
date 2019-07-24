@@ -1,5 +1,7 @@
 # AspVue2
 
+[![CircleCI](https://circleci.com/gh/MasanoriIwakura/AspVue2.svg?style=svg)](https://circleci.com/gh/MasanoriIwakura/AspVue2)
+
 ## Project setup
 
 ```bash
