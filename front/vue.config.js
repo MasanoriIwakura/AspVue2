@@ -7,5 +7,5 @@ module.exports = {
       title: 'AspVue2'
     }
   },
-  outputDir: 'dist'
+  outputDir: '../docker/nginx/dist'
 }
